@@ -1,0 +1,16 @@
+
+services:
+  slambook2-dev:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    image: slambook2-env:v1
+    container_name: slambook2-dev
+    privileged: true
+    network_mode: "host"
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./:/workspaces:cached
+
+    command: tail -f /dev/null
