@@ -7,7 +7,11 @@ RUN apt-get update && \
     build-essential \
     wget \
     git \
-    libeigen3-dev && \
+    libeigen3-dev \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    libepoxy-dev \
+    python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # install cmake-3.28.0 to match Sophus library
